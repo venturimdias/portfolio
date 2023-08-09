@@ -41,7 +41,7 @@ export const ListaEventos: EventoProps[] = [
     isCasal: true,
   },
   {
-    date: "2024-10-14",
+    date: "2023-10-14",
     title: "ENCONTRO DOS MURUCI", 
     slug: 'encontro-dos-murucis',
     local: 'Guaçuí - ES',
