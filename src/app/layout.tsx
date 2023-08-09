@@ -18,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+      </head>
       <body className={montserrat.className}>
         {children}
       </body>
