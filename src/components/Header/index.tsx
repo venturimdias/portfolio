@@ -12,7 +12,7 @@ interface HeaderProps{
 }
 
 const Header = ({ menuActive = '' } : HeaderProps) => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
 
   const handleMenuMoble = () => setActive(!active)
 
@@ -29,7 +29,6 @@ const Header = ({ menuActive = '' } : HeaderProps) => {
 
         <MenuMobile onClick={() => handleMenuMoble()} ><MenuIcon /></MenuMobile>
         
-        {/* <User perfil={perfil} /> */}
       </MenuPerfil>
     </BoxHeader>
   </>
@@ -58,6 +57,8 @@ const MenuPerfil = styled.div`
 const MenuMobile = styled.div`
   display: none;
   padding:5px;
+  width:45px;
+  height:45px;
 
   svg{
     width:24px;

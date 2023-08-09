@@ -14,12 +14,12 @@ export const ListaEventos: EventoProps[] = [
     local: 'STEFFEN CENTRO DE EVENTOS',
     img: "https://www.steffencentrodeeventos.com.br/wp-content/uploads/2023/06/banner-site-3.png" 
   },
-  { 
-    date: "2023-11-01",
+  {
+    date: "2023-11-02",
     title: "COROA VERMELHA", 
     slug: 'coroa-vermelha',
     local: 'Porto seguro - Bahia',
-    img: ""
+    img: "/coroa.png"
   },
   { 
     date: "2023-08-25",

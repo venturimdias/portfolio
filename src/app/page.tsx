@@ -1,12 +1,22 @@
 "use client"
+import { Suspense, useEffect, useState } from 'react'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { StackList } from '@/components/Stack/StackList'
 import { Container } from '@/styles/global'
 import Image from 'next/image'
+import LoadingPage from '@/components/LoadingPage'
 
 export default function Home() {
-  return (<>
+  const [load, setLoad] = useState('')
+  
+  useEffect(() => {
+    setLoad('carregado')
+  },[load])
+
+  return (!load 
+  ? <LoadingPage />
+  : <>
     <Header menuActive='home'/>
 
     <Container>
@@ -20,6 +30,5 @@ export default function Home() {
 
     <Footer />
   </>
-
   )
 }

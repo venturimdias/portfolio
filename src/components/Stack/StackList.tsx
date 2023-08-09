@@ -7,11 +7,13 @@ const StackList = () => {
   return <>
     <br/>
       <h5>Stacks:</h5>
-      <BoxStack>
+      {stackObj.length > 0 
+      && <BoxStack>
         {stackObj.map((i, key) => {
           return <Stack key={key} titulo={i.titulo} num={i.num} color={i.color} />
         })}
       </BoxStack>
+      }
   </>
 }
 
