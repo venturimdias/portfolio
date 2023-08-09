@@ -4,6 +4,7 @@ import { ListaEventos } from '@/services/Evento'
 import moment from 'moment';
 import Link from 'next/link';
 import { CasalIcon, UsersIcon } from '@/components/svg/Icons';
+import { evento_dias_restantes } from './[slug]/page';
 
 export default function EventoList() {
 
@@ -26,8 +27,10 @@ export default function EventoList() {
       </div>
       <h4 className="leading-[120%] mb-5">{i.title}</h4>
       <b className='text-amber-400'>{i.local}</b>
-      <p>{moment(i.date).format('DD/MM/YYYY')}</p>
-      
+      <p>{moment(i.date).format('DD/MM/YYYY')} | 
+      Faltam: <b className='text-amber-400'> {evento_dias_restantes(i.date)}</b> 
+      {evento_dias_restantes(i.date) > 1 ? " dias" : " dia" }
+      </p>
     </Link>)}
   </div>)
 }
