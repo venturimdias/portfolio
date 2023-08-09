@@ -1,0 +1,25 @@
+interface IStackList{
+  titulo: string, 
+  num: number, 
+  color: string,
+}
+export const stackObj : IStackList[] = [
+  {titulo: "HTML", num: 90, color: ''},
+  {titulo: "CSS", num: 90, color: ''}, 
+  {titulo: "Javascript", num: 70, color: ''},
+  {titulo: "Jquery", num: 80, color: ''},
+  {titulo: "React.js", num: 70, color: ''},
+  {titulo: "Next.js", num: 80, color: ''},
+  {titulo: "Vue.js", num: 40, color: ''},
+  {titulo: "Wordpress", num: 60, color: ''},
+  {titulo: "Node.js", num: 60, color: '#DB5461'},
+  {titulo: "PHP", num: 40, color: '#DB5461'},
+  {titulo: "Python", num: 30, color: '#DB5461'},
+  {titulo: "C#", num: 20, color: '#DB5461'},
+  {titulo: "MySQL", num: 40, color: '#DB5461'},
+  {titulo: "GraphQL", num: 40, color: '#DB5461'},
+  {titulo: "Figma", num:70, color:"#777da7"},
+  {titulo: "Illustrator", num:70, color:"#777da7"},
+  {titulo: "Photoshop", num:70, color:"#777da7"},
+  {titulo: "Indesign", num:50, color:"#777da7"},
+]
