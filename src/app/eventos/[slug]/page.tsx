@@ -1,22 +1,16 @@
 "use client"
-import moment from 'moment';
-
 import { EventoProps, ListaEventos } from "@/services/Evento"
 import Image from "next/image"
 import { Metadata } from 'next';
 
+import moment from 'moment';
+import { evento_dias_restantes } from "@/components/Utils";
 moment.locale('pt-br')
 
 interface pageProps{
   params: { slug: string }
 }
 
-export const evento_dias_restantes = (data : string) => {
-  const data1 = moment(new Date()).subtract(1, 'days') //.format('DD/MM/YYYY')
-  const data2 = moment(data) //.format('DD/MM/YYYY')
-  const dias =  data2.diff(data1, 'days');
-  return dias
-}
 export default async function Page({ params } : pageProps){
   
   const eventos : EventoProps[] = ListaEventos.filter(i => i.slug == params.slug)

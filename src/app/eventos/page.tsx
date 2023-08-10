@@ -4,7 +4,8 @@ import { ListaEventos } from '@/services/Evento'
 import moment from 'moment';
 import Link from 'next/link';
 import { CasalIcon, UsersIcon } from '@/components/svg/Icons';
-import { evento_dias_restantes } from './[slug]/page';
+import { evento_dias_restantes } from '@/components/Utils';
+
 
 export default function EventoList() {
 
