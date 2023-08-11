@@ -1,4 +1,39 @@
 "use client"
+import { gql } from 'graphql-request'
+import graphQLClient from './config'
+
+export interface EventoItemProps {
+  id: string,
+  data: string,
+  titulo: string,
+  slug: string,
+  local: string,
+  isCasal: boolean,
+  img: {
+    url: string,
+  }
+}
+export interface EventoListProps {
+  eventos: EventoItemProps[]
+}
+export const getEventoLista = async () => {
+  const query = gql`query MyQuery {
+    eventos {
+      id
+      data
+      titulo
+      slug
+      local
+      isCasal
+      img {
+        url
+      }
+    }
+  }`
+
+  const resp : EventoListProps = await graphQLClient.request(query)
+  return resp
+}
 export interface EventoProps {
   date:string,
   title: string,
