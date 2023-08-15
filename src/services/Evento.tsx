@@ -16,6 +16,11 @@ export interface EventoItemProps {
 export interface EventoListProps {
   eventos: EventoItemProps[]
 }
+export interface EventoDetalheProps {
+  evento: EventoItemProps
+}
+
+
 export const getEventoLista = async () => {
   const query = gql`query MyQuery {
     eventos {
@@ -34,6 +39,29 @@ export const getEventoLista = async () => {
   const resp : EventoListProps = await graphQLClient.request(query)
   return resp
 }
+
+
+export const getEvento = async ( slug : string ) => {
+  const query = gql`
+  query Evento {
+    evento(where: { slug: "${slug}" }){
+       id
+      data
+      titulo
+      slug
+      local
+      isCasal
+      img {
+        url
+      }
+    }
+  }`
+
+  const resp : EventoDetalheProps = await graphQLClient.request(query)
+  return resp
+}
+
+
 export interface EventoProps {
   date:string,
   title: string,
